@@ -17,7 +17,10 @@ file_path_201912 <- "/Users/liuruomeng/Desktop/COV-Weibo2.0/2020-12.csv"
 
 
 data_201912 <- read.csv(file_path_201912)
+
 data_user <- read.csv(file_path_user)
+
+
 head(data_user)
 head(data_201912)
 
@@ -25,13 +28,7 @@ head(data_201912)
 
 
 # 模拟您的数据
-data <- data.frame(
-  X_id = c("IiF63fYO0", "IiF6Dkep6", "IiF84inVj", "IiF8eCe2f", "IiF8j4W4v", "IiF8px6dn"),
-  user_id = c("4fcbad79e90c801a", "54eef1e0487e6985", "d5b2a53868fba234", "8ccc97455ba077b8", "071b2af605edaa0a", "8dc55850627b410a"),
-  like_num = c(0, 0, 0, 0, 0, 24),
-  repost_num = c(0, 0, 0, 0, 0, 1),
-  comment_num = c(0, 0, 0, 0, 0, 7)
-)
+data <- data_201912
 
 # 假设每条记录是一个“事件”，我们根据like_num, repost_num, comment_num创建边
 # 这里简化处理，仅使用repost_num > 0作为边的条件
